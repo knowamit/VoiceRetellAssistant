@@ -5,7 +5,7 @@
  * Compatible with Node.js 18.x
  */
 
-const { spawnSync } = require('child_process');
+import { spawnSync } from 'child_process';
 
 console.log('Starting development server compatible with Node.js 18.x...');
 
