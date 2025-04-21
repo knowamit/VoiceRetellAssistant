@@ -1,0 +1,65 @@
+# Retell AI Voice Agent Web App
+
+A web application that integrates with Retell AI to enable voice agent calls with a clean, modern interface.
+
+## Project Overview
+
+This application allows users to:
+- Configure API settings for Retell AI integration
+- Make voice calls to AI agents
+- View call history
+- Control calls (start, end, mute)
+
+## Running Locally with Node.js 18.x
+
+This project was designed for Node.js 20+, but if you're using Node.js 18.x, you can use the compatibility scripts provided:
+
+### Option 1: Simple Bootstrap Method (Recommended)
+
+Run the bootstrap script that sets up local development servers:
+
+```bash
+node bootstrap.mjs
+```
+
+This will:
+1. Create necessary local configuration files
+2. Start the API server on port 5000
+3. Start the Vite development server (front-end) 
+4. No configuration needed - just run the script
+
+### Option 2: Alternative Methods
+
+If Option 1 doesn't work, try these alternatives:
+
+```bash
+# Use the start-local.mjs script
+node start-local.mjs
+
+# Or try the compatibility script directly
+node compatibility.js
+```
+
+## Features
+
+- **API Configuration**: Enter your Retell AI Agent ID and API Key
+- **Voice Calling**: Initiate and control voice calls with AI agents
+- **Call History**: View past calls with duration and timestamps
+- **Modern UI**: Clean, responsive interface design
+
+## Development
+
+For normal development on Node.js 20+:
+
+```bash
+npm run dev
+```
+
+This command uses the standard Replit workflow named "Start application".
+
+## Technical Notes
+
+- React frontend with Shadcn/UI components
+- Express backend with in-memory storage
+- Vite for fast development experience
+- RESTful API for integrated voice agent functionality
