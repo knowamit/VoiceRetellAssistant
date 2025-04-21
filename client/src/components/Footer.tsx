@@ -7,7 +7,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} VoiceConnect. All rights reserved.
           </div>
           <div className="text-sm text-slate-500">
-            Powered by <a href="https://retellai.com" className="text-primary-600 hover:text-primary-700">Retell AI</a>
+            Powered by <a href="https://www.raisingsuperstars.com/" className="text-primary-600 hover:text-primary-700">RaisingSupers</a>
           </div>
         </div>
       </div>
