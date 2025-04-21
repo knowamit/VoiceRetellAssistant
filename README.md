@@ -12,33 +12,39 @@ This application allows users to:
 
 ## Running Locally with Node.js 18.x
 
-This project was designed for Node.js 20+, but if you're using Node.js 18.x, you can use the compatibility scripts provided:
+This project was designed for Node.js 20+, but if you're using Node.js 18.x, we've created several compatibility options:
 
-### Option 1: Simple Bootstrap Method (Recommended)
+### Option 1: Run with Custom ESM Loader (Recommended)
 
-Run the bootstrap script that sets up local development servers:
+This is the easiest method - it uses an ESM loader to patch the code at runtime:
 
 ```bash
-node bootstrap.mjs
+node run-node18.mjs
 ```
 
-This will:
-1. Create necessary local configuration files
-2. Start the API server on port 5000
-3. Start the Vite development server (front-end) 
-4. No configuration needed - just run the script
+This approach:
+- Adds a custom ES module loader that fixes import.meta.dirname references
+- Doesn't modify any original files
+- Runs the standard npm run dev command with compatibility hooks
 
 ### Option 2: Alternative Methods
 
 If Option 1 doesn't work, try these alternatives:
 
 ```bash
-# Use the start-local.mjs script
-node start-local.mjs
+# Use the bootstrap script for a split frontend/backend approach
+node bootstrap.mjs
 
-# Or try the compatibility script directly
-node compatibility.js
+# Use the simpler start script
+node start-local.mjs
 ```
+
+### Troubleshooting
+
+If you're still seeing errors related to `import.meta.dirname`, consider:
+
+1. Upgrading to Node.js 20+ (strongly recommended)
+2. Using the Replit environment where it works out of the box
 
 ## Features
 
